@@ -10,6 +10,7 @@ env_logger = {version = "0.11.3", features = ["unstable-kv"] }
 futures = "0.3.21"
 log = { version = "0.4.21", features = ["kv", "kv_sval"] }
 logid = { version = "0.12.2", features = ["log_traces"] }
+minitrace = { version = "0.6.4", features = ["enable"] }
 rand = "0.8.5"
 snafu = "0.8.2"
 sval = "2.11.1"

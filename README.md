@@ -108,3 +108,18 @@ Meaning custom types cannot be directly logged.
 
 The sample `structured.rs` uses the `sval` crate to log a custom struct with `log`.
 It also shows the current workaround for `tracing`.
+
+## Custom Logger
+
+The `own_logger.rs` file shows how to implement a custom logger for the `log` crate.
+
+Implementing a custom logger for `tracing` (called `Subscriber`) is much harder,
+because one has to manage the creation of spans. Therefore, no sample is provided for it.
+
+`logid` does not allow to implement a custom logger.
+
+## Tracing alternative
+
+The `minitrace` crate may be used as an alternative to get tracing information via spans.
+According to benchmarks made by the `minitrace` team, it is ~10x faster than tracing.
+However, it suffers the same problem with handling spans in asynchronous context. 
